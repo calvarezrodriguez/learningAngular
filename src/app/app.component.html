@@ -1,6 +1,43 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome: {{ title }}!
-  </h1>
+<div class="container">
+  <div class="col-xs-12">
+    <h3>
+      {{ title }}
+    </h3>
+  </div>
+  <hr />
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label for="name" class="sr-only">Name</label>
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        class="form-control"
+        [(ngModel)]="inputName"
+      />
+    </div>
+    <div class="form-group col-md-2">
+      <label for="lastname" class="sr-only">Lastname</label>
+      <input
+        type="text"
+        name="lastname"
+        placeholder="Lastname"
+        class="form-control"
+        [(ngModel)]="inputLastname"
+      />
+    </div>
+    <div class="col">
+      <button type="submit" class="btn btn-primary" (click)="onAddPerson()">
+        Add
+      </button>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-xs-12">
+      <div *ngFor="let person of people; let i = index">
+        {{ i + 1 }}: {{ person.name }} {{ person.lastname }}
+      </div>
+    </div>
+  </div>
 </div>
