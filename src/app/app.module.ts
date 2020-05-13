@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms'
 
 import { AppComponent } from './app.component';
+import { SumComponent } from './sum/sum.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SumComponent
   ],
   imports: [
     BrowserModule,
