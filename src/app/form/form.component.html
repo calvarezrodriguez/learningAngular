@@ -1,0 +1,27 @@
+<form>
+  <div class="form-group">
+    <label>A operator</label>
+    <p>
+      <input
+        class="form-control"
+        name="A"
+        type="number"
+        [(ngModel)]="aOperator"
+        placeholder="Write A operator"
+      />
+    </p>
+    <!-- {{ aOperator }} -->
+    <label>B operator</label>
+    <p>
+      <input
+        class="form-control"
+        name="B"
+        type="number"
+        [(ngModel)]="bOperator"
+        placeholder="Write B operator"
+      />
+    </p>
+    <!-- {{ bOperator }} -->
+    <button class="btn btn-primary" (click)="onSum()">Sum</button>
+  </div>
+</form>

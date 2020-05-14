@@ -1,28 +1,4 @@
-<form>
-  <div class="form-group">
-    <label>A operator</label>
-    <p>
-      <input
-        class="form-control"
-        name="A"
-        type="number"
-        [(ngModel)]="aOperator"
-        placeholder="Write A operator"
-      />
-    </p>
-    <!-- {{ aOperator }} -->
-    <label>B operator</label>
-    <p>
-      <input
-        class="form-control"
-        name="B"
-        type="number"
-        [(ngModel)]="bOperator"
-        placeholder="Write B operator"
-      />
-    </p>
-    <!-- {{ bOperator }} -->
-    <button class="btn btn-primary" (click)="onSum()">Sum</button>
-    <p>Result: {{ result }}</p>
-  </div>
-</form>
+<!-- Envío el valor de la variable result en el formulario al componente padre -->
+<app-form (result)="onDisplayResult($event)"></app-form>
+<!-- El componente hijo recibirá el valor del componente padre -->
+<app-result [result]="result"></app-result>

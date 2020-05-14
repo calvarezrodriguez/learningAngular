@@ -6,14 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sum.component.css'],
 })
 export class SumComponent implements OnInit {
-  aOperator: number;
-  bOperator: number;
   result: number;
 
   constructor() {}
 
-  onSum() {
-    this.result = this.aOperator + this.bOperator;
+  onDisplayResult(result: number) {
+    this.result = result;
   }
 
   ngOnInit(): void {}
