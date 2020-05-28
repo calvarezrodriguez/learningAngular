@@ -1,3 +1,4 @@
+// We use this model to create a Person
 export class Person {
   /*name:string;
   lastname:string;
