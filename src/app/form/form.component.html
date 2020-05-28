@@ -1,27 +1,11 @@
-<form class="form-row">
-  <div class="form-group col-md-2">
-    <label for="name" class="sr-only">Name</label>
-    <input
-      type="text"
-      name="name"
-      placeholder="Name"
-      class="form-control"
-      #inputName
-    />
-  </div>
-  <div class="form-group col-md-2">
-    <label for="lastname" class="sr-only">Lastname</label>
-    <input
-      type="text"
-      name="lastname"
-      placeholder="Lastname"
-      class="form-control"
-      #inputLastname
-    />
-  </div>
-  <div class="col">
-    <button type="submit" class="btn btn-primary" (click)="onAddPerson()">
-      Add
-    </button>
-  </div>
+<form class="item">
+  <input type="text" name="name" placeholder="Name" [(ngModel)]="inputName" />
+  <input
+    type="text"
+    name="lastname"
+    placeholder="Lastname"
+    class="form-control"
+    [(ngModel)]="inputLastname"
+  />
+  <button type="submit" (click)="onAddPerson()">+</button>
 </form>

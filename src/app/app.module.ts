@@ -18,7 +18,6 @@ import { PeopleService } from './people.service';
     BrowserModule,
     FormsModule
   ],
-  //We import the services to use in our program
   providers: [LoggingService,PeopleService],
   bootstrap: [AppComponent]
 })

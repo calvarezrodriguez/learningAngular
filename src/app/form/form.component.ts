@@ -1,8 +1,6 @@
 import {
   Component,
   OnInit,
-  // Output,
-  // EventEmitter,
   ViewChild,
   ElementRef,
 } from '@angular/core';
@@ -16,13 +14,10 @@ import { PeopleService } from '../people.service';
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
-  // @Output() createdPerson = new EventEmitter<Person>();
-  // inputName: string;
-  // inputLastname: string;
-
-  //Catch easy information
-  @ViewChild('inputName') inputName: ElementRef;
-  @ViewChild('inputLastname') inputLastname: ElementRef;
+  inputName: string;
+  inputLastname: string;
+  // @ViewChild('inputName') inputName: ElementRef;
+  // @ViewChild('inputLastname') inputLastname: ElementRef;
 
   constructor(
     private logginService: LoggingService,
@@ -37,16 +32,9 @@ export class FormComponent implements OnInit {
 
   onAddPerson() {
     let person1 = new Person(
-      this.inputName.nativeElement.value,
-      this.inputLastname.nativeElement.value
+      this.inputName,
+      this.inputLastname
     );
-    // this.logginService.sendConsoleMessage(
-    //   'We send person with name: ' +
-    //     person1.name +
-    //     ', and Lastname: ' +
-    //     person1.lastname
-    // );
-    // this.createdPerson.emit(person1);
     this.peopleService.addPerson(person1);
   }
 }

@@ -1,10 +1,4 @@
-<div class="row">
-  <div class="col-xs-12">
-    <div>
-      {{ indice + 1 }}: {{ person.name }} {{ person.lastname }}
-      <button type="submit" class="btn btn-info" (click)="sendGreetings()">
-        Edit
-      </button>
-    </div>
-  </div>
+<div class="item">
+  <input type="checkbox" (click)="sendGreetings()" />
+  <p>{{ indice + 1 }}: {{ person.name }} {{ person.lastname }}</p>
 </div>
