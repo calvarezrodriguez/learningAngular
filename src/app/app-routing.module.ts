@@ -4,6 +4,7 @@ import { PeopleComponent } from './people/people.component';
 import { PersonComponent } from './people/person/person.component';
 import { FormComponent } from './people/form/form.component';
 import { ErrorComponent } from './error/error.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', component: PeopleComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
       { path: ':id', component: FormComponent },
     ],
   },
+  {path: 'login', component: LoginComponent},
   {path: '**', component: ErrorComponent}
 ];
 

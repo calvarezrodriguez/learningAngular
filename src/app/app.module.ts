@@ -12,6 +12,7 @@ import { PeopleComponent } from './people/people.component';
 import { ErrorComponent } from './error/error.component';
 import { DataService } from './data.services';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormComponent,
     PeopleComponent,
     ErrorComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
   providers: [LoggingService, PeopleService, DataService],
