@@ -1,0 +1,29 @@
+<div class="box">
+  <form class="item" #f="ngForm" (ngSubmit)="f.form.valid && onSavePerson()">
+    <input
+      type="text"
+      name="name"
+      placeholder="Name"
+      [(ngModel)]="inputName"
+      required
+    />
+    <input
+      type="text"
+      name="lastname"
+      placeholder="Lastname"
+      class="form-control"
+      [(ngModel)]="inputLastname"
+      required
+    />
+    <button type="submit" style="cursor: pointer;">+</button>
+    <button
+      *ngIf="index != null"
+      type="submit"
+      style="cursor: pointer;"
+      class="buttonRed"
+      (click)="deletePerson()"
+    >
+      -
+    </button>
+  </form>
+</div>
