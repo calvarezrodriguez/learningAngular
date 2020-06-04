@@ -1,8 +1,8 @@
 <div class="item">
   <ul>
     <li>
-      <a [routerLink]="['/people', indice]">
-       {{ person.name }} {{ person.lastname }}
+      <a [routerLink]="['/people', indice]" [queryParams]="{ editMode: '1' }">
+        {{ person.name }} {{ person.lastname }}
       </a>
     </li>
   </ul>

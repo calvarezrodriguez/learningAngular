@@ -19,10 +19,13 @@ export class PeopleComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.people = this.peopleService.people;
+    this.peopleService.getPeople().subscribe((people: Person[]) => {
+      this.people = people;
+      this.peopleService.setPeople(people);
+    });
   }
 
-  add(){
-    this.router.navigate(['people/add'])
+  add() {
+    this.router.navigate(['people/add']);
   }
 }
