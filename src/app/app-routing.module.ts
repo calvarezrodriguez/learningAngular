@@ -5,19 +5,21 @@ import { PersonComponent } from './people/person/person.component';
 import { FormComponent } from './people/form/form.component';
 import { ErrorComponent } from './error/error.component';
 import { LoginComponent } from './login/login.component';
+import { LoginGuard } from './login/login-guard.service';
 
 const routes: Routes = [
-  { path: '', component: PeopleComponent },
+  { path: '', component: PeopleComponent, canActivate: [LoginGuard] },
   {
     path: 'people',
     component: PeopleComponent,
+    canActivate: [LoginGuard],
     children: [
       { path: 'add', component: FormComponent },
       { path: ':id', component: FormComponent },
     ],
   },
-  {path: 'login', component: LoginComponent},
-  {path: '**', component: ErrorComponent}
+  { path: 'login', component: LoginComponent },
+  { path: '**', component: ErrorComponent },
 ];
 
 @NgModule({
