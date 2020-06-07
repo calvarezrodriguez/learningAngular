@@ -1,0 +1,26 @@
+[build]
+    command = "ng build --prod --aot"
+    base = "."
+    publish = "dist/Angular/"
+[build.environment]
+  NODE_VERSION = "13.0.1"
+[context.branch-deploy]
+    command = "ng build --prod --aot"
+    base = "."
+    publish = "dist/Angular/"
+[context.production]
+    command = "ng build --prod --aot"
+    base = "."
+    publish = "dist/Angular/"
+[context.staging]
+    command = "ng build --prod --aot"
+    base = "."
+    publish = "dist/Angular/"
+[context.dev]
+    command = "ng build --prod --aot"
+    base = "."
+    publish = "dist/Angular/"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
