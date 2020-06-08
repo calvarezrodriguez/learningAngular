@@ -62,14 +62,14 @@
       <!-- NO ESTA LOGEADO -->
       <ul *ngIf="!isLoggedIn" class="flex">
         <!--Regular Link-->
-        <li class="hover:bg-blue-800 hover:text-white">
+        <li *ngIf="!isLoggedIn && allowRegister" class="hover:bg-blue-800 hover:text-white">
           <a
             routerLink="/login"
             class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-bold"
             ><i class="fas fa-user"></i> Login</a
           >
         </li>
-        <li class="hover:bg-blue-800 hover:text-white">
+        <li *ngIf="!isLoggedIn && allowRegister" class="hover:bg-blue-800 hover:text-white">
           <a
             routerLink="/register"
             class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-bold"
