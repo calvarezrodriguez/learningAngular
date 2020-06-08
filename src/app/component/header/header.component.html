@@ -1,4 +1,87 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+<body class="bg-gray-200 font-sans leading-normal tracking-normal">
+  <nav class="relative bg-white border-b-2 border-gray-300 text-gray-900">
+    <div class="container m-auto flex justify-between">
+      <div class="relative block p-4 lg:p-6 text-xl text-blue-600 font-bold">
+        Control<span class="text-gray-800">CA</span>
+      </div>
+
+      <!-- ESTA LOGEADO -->
+      <ul *ngIf="isLoggedIn" class="flex">
+        <li class="hover:bg-blue-800 hover:text-white">
+          <a
+            class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-bold"
+            ><i class="fas fa-user"></i> Bienvenido {{ loggedInUser }}</a
+          >
+        </li>
+        <li class="toggleable hover:bg-blue-800 hover:text-white">
+          <input
+            type="checkbox"
+            value="selected"
+            id="toggle-one"
+            class="toggle-input"
+          />
+          <label
+            for="toggle-one"
+            class="block cursor-pointer py-6 px-4 lg:p-6 text-sm lg:text-base font-bold"
+            ><i class="fas fa-bars"></i> Menu</label
+          >
+          <div
+            role="toggle"
+            class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-blue-800"
+          >
+            <div
+              class="container mx-auto w-full flex flex-wrap justify-between mx-2"
+            >
+              <ul
+                class="px-4 w-full sm:w-1/2 lg:w-1/4 border-gray-600 border-b sm:border-r lg:border-b-0 pb-6 pt-6 lg:pt-3"
+              >
+                <h3 class="font-bold text-xl text-white text-bold mb-2">
+                  Ajustes
+                </h3>
+                <li>
+                  <a
+                    routerLink="/config"
+                    class="block p-3 hover:bg-blue-600 text-gray-300 hover:text-white"
+                    ><i class="fas fa-cog"></i> Configuración</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="hover:bg-blue-800 hover:text-white">
+          <a
+            style="cursor: pointer;"
+            (click)="logout()"
+            class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-bold"
+            ><i class="fas fa-user-times"></i> Cerrar Sesión</a
+          >
+        </li>
+      </ul>
+
+      <!-- NO ESTA LOGEADO -->
+      <ul *ngIf="!isLoggedIn" class="flex">
+        <!--Regular Link-->
+        <li class="hover:bg-blue-800 hover:text-white">
+          <a
+            routerLink="/login"
+            class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-bold"
+            ><i class="fas fa-user"></i> Login</a
+          >
+        </li>
+        <li class="hover:bg-blue-800 hover:text-white">
+          <a
+            routerLink="/register"
+            class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base font-bold"
+            ><i class="fas fa-user"></i> Registrar</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</body>
+
+<!-- <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
   <div class="container">
     <a routerLink="/" class="navbar-brand">Control de Clientes</a>
     <button
@@ -44,4 +127,4 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
