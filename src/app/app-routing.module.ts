@@ -4,10 +4,10 @@ import { BoardComponent } from './component/board/board.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { ConfigComponent } from './component/config/config.component';
-import { EditClientComponent } from './component/edit-client/edit-client.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ConfigGuard } from './guards/config.guard';
+import { EditClientComponent } from './component/clients/edit-client/edit-client.component';
 
 const routes: Routes = [
   { path: '', component: BoardComponent, canActivate: [AuthGuard] },

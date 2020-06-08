@@ -11,7 +11,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import { BoardComponent } from './component/board/board.component';
 import { ClientsComponent } from './component/clients/clients.component';
-import { EditClientComponent } from './component/edit-client/edit-client.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { ConfigComponent } from './component/config/config.component';
@@ -23,6 +22,7 @@ import { LoginService } from './services/login.service';
 import { AuthGuard } from './guards/auth.guard';
 import { ConfigService } from './services/config.service';
 import { ConfigGuard } from './guards/config.guard';
+import { EditClientComponent } from './component/clients/edit-client/edit-client.component';
 
 @NgModule({
   declarations: [
